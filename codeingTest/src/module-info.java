@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author parkjungi
- *
- */
-module codeingTest {
-}
