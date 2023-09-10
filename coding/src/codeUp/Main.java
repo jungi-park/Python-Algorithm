@@ -79,7 +79,39 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		Long text = sc.nextLong();
 		System.out.printf("%d", text);
- */
+		//38번 
+	Scanner sc = new Scanner(System.in);
+	    long a = sc.nextLong();
+	    long b = sc.nextLong();
+	    System.out.println(a+b);
+		//45번 
+		Scanner sc = new Scanner(System.in);
+	    float a = sc.nextFloat();
+	    float b = sc.nextFloat();
+	   System.out.printf("%.0f\n",a+b);
+	   System.out.printf("%.0f\n",a-b);
+	   System.out.printf("%.0f\n",a*b);
+	   System.out.printf("%.0f\n",a/b);
+	   System.out.printf("%.0f\n",a%b);
+	   System.out.printf("%.2f\n",a/b);
+		//58번 
+		  Scanner sc = new Scanner(System.in);
+	        int a = sc.nextInt();
+	        System.out.println(~a);
+		  Scanner sc = new Scanner(System.in);
+	        int a = sc.nextInt();
+	        int b = sc.nextInt();
+	        System.out.println(a);
+		//64번 
+		  Scanner sc = new Scanner(System.in);
+	        int a = sc.nextInt();
+	        int b = sc.nextInt();
+	        int c = sc.nextInt();
+	        
+	        int anser = a>=b? b>=c?c:b :a>=c?c:a;
+	        System.out.println(anser);
+	             */
+		//70번부터 다시 시작
 	}
 
 }
