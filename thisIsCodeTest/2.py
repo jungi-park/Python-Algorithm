@@ -131,7 +131,7 @@ if x-2>=1:
      if y-1 >0 :
         count+=1
 print(count)
-'''
+
 #문자열 재정렬
 n= input()
 num=0
@@ -146,13 +146,4 @@ if num != 0:
     result.append(str(num))
 # join 함수는 매개변수로 들어온 리스트에 있는 요소 하나하나를 합쳐서 하나의 문자열로 바꾸어 반환하는 함수입니다.
 print("".join(result))
-
-    
-
-
-
-
-
-
-    
-    
+'''
