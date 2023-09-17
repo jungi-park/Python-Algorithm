@@ -22,7 +22,7 @@ anser = result[0]
 for n in range(1,len(result)):
     anser -= result[n]
 
-print(anser)
+print(anser)    
 
     
 
