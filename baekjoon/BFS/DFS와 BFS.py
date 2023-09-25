@@ -9,7 +9,7 @@ for j in range(n+1):
 # print(graph)
 
 def DFS(graph, v, visited):
-    visited[v]=True
+    visited[v]=True 
     print(v, end=' ')
     for i in graph[v]:
         if visited[i] == False:
