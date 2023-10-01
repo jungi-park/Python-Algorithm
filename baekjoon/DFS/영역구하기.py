@@ -8,10 +8,9 @@ graph = [[False] * n for _ in range(m)]
 
 for _ in range(k):
     x1, y1, x2, y2 = map(int,input().split())
-    for sx in range(x1,x2):
-        for sy in range(y1,y2):
-            if 0 <= sx < m and 0 <= sy < n:
-                graph[sx][sy] = True
+    for sy in range(y1,y2):
+        for sx in range(x1,x2):
+                graph[sy][sx] = True
 
 d = [(1,0),(-1,0),(0,-1),(0,1)]
 
@@ -21,7 +20,6 @@ def DFS(x,y):
     global countOne
     graph[x][y] = True
     countOne += 1
-
     for dx, dy in d:
         nx = x + dx
         ny = y + dy
@@ -29,6 +27,7 @@ def DFS(x,y):
             continue
         if not graph[nx][ny]:
             DFS(nx ,ny)
+            
 
 count = 0
 result = []
