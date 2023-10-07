@@ -63,24 +63,53 @@
 
 #효율적인 화폐구성
 
-n,m = map(int,input().split())
+# n,m = map(int,input().split())
 
-array= []
+# array= []
 
-#n개의 화폐 단위 입력
-for _ in range(n):
-    array.append(int(input()))
+# #n개의 화폐 단위 입력
+# for _ in range(n):
+#     array.append(int(input()))
     
 
-d = [10001]*(m+1)
+# d = [10001]*(m+1)
 
-d[0] = 0
+# d[0] = 0
 
-for i in range(n):
-    for j in range(array[i],m+1):
-        if d[j -array[i]] != 10001:
-            d[j] = min(d[j],d[j-array[i]+1])
+# for i in range(n):
+#     for j in range(array[i],m+1):
+#         if d[j -array[i]] != 10001:
+#             d[j] = min(d[j],d[j-array[i]+1])
 
-if d[m] == 10001:
-    print(-1)
-else:print(d[m])
+# if d[m] == 10001:
+#     print(-1)
+# else:print(d[m])
+
+#금광
+
+for tc in range(int(input())):
+
+    n,m = map(int,input().split())
+
+    array = list(map(int,input().split()))
+
+    dp = []
+
+    for i in range(n):
+        dp.append(array[i*m: i*m+m])
+    #다이나믹 프로그래밍 진행
+    for j in range(1,m): #열
+        for i in range(n): #행
+            #왼쪽위에서 오는경우
+            if i == 0: left_up=0 #i == 0인경우 위에서 올 수 없어서 처리
+            else:left_up = dp[i-1][j-1]
+            #왼쪽아래에서 오는경우
+            if i == n-1: left_down=0
+            else:left_down = dp[i+1][j-1]
+            #왼쪽에서 오는경우
+            left =dp[i][j-1]
+            dp[i][j] = dp[i][j] + max(left_up,left_down,left)
+    result = 0
+    for i in range(n):
+        result=max(result,dp[i][m-1])
+    print(result)
