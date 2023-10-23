@@ -26,6 +26,6 @@ for i in range(n):
     puzzle.append(input().split())
 dx = [1, 0]
 dy = [0, 1]
-MIN, MAX = int(1e9), -int(1e9)
+MIN, MAX = float("inf"), float("-inf")
 search(0, 0, int(puzzle[0][0]), '')
 print(MAX, MIN)
