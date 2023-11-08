@@ -18,4 +18,5 @@ for _ in range(int(input())):
                 dp[i] += dp[i - coin]
     result.append(dp[money])
 
-print(result)
+for i in result:
+    print(i)
