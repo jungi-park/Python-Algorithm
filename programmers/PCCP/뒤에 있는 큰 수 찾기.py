@@ -1,4 +1,4 @@
-# 내 풀이
+# 내 풀이 정확성: 82.6
 def solution(numbers):
     answer = []
     
