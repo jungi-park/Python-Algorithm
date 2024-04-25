@@ -1,5 +1,4 @@
 text = input().strip().split()
-print(text)
 result = text[0][0].upper()
 noneWords = ['i', 'pa', 'te', 'ni', 'niti', 'a', 'ali', 'nego', 'no', 'ili']
 
